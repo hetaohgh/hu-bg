@@ -27,6 +27,30 @@ body {
 	text-align: center;
 }
 
+  body {
+      animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: pink;}
+      25%  {background: red;}
+      50%  {background: orange;}
+      75%  {background: green;}
+      100% {background: pink;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: pink;}
+      25%  {background: red;}
+      50%  {background: orange;}
+      75%  {background: green;}
+      100% {background: pink;}
+    }
+
 .headline {
 	padding: 30px 50px;
 	font-size: 70px;
